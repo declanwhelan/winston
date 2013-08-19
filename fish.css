@@ -1,0 +1,145 @@
+body{
+background-color:lightblue;
+font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+#details{
+	box-shadow: 10px 10px 5px #888888;
+	padding:10px;		
+	text-align: center;
+	border:1px solid black;
+	position:relative;
+	z-index: 2;
+	margin:0 auto;
+	width:400px;
+	border-radius: 20px;
+	background-color:white;
+	height:200px;
+}
+
+.fish{
+	z-index: 1;
+	-webkit-animation: float 2.5s infinite; 
+	position:absolute;
+	left:50%;
+	top:50%;
+}
+
+.bubble{
+	-webkit-animation: breathe 5s infinite; 
+	position:relative;
+	top:-280px;
+	left:0px;
+	width: 20px;
+	height: 20px;
+	border:1px solid black;
+	border-radius: 50px;
+}
+@-webkit-keyframes breathe
+{
+	0% {
+		top:-300px;
+		opacity:100%;
+	}
+	100%{
+		opacity:0%;
+		top: -500px;
+	}
+}
+
+@-webkit-keyframes float
+{
+	0% {
+		top:55%;
+	}
+	50% {
+		
+		top:54%;
+	}
+	100%{
+		top:55%;
+	}
+}
+
+.body {
+	position:relative;
+	top:-110px;
+	width: 200px;
+	height: 100px;
+	background: orange;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+
+}	
+.tail {
+	position:relative;
+	left:170px;
+	width: 0; 
+	height: 0; 
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-right: 60px solid orange; 
+}
+
+
+
+.eye {
+	position:relative;
+	top:-180px;
+	left:35px;
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 50px;
+}
+.eyelid{
+	-webkit-transform:rotate(-10deg);
+	-webkit-animation: blink 8s infinite; 
+	position:relative;
+	left:30px;
+	width: 30px;
+	height: 20px;
+	background: orange;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+
+}
+
+@-webkit-keyframes blink
+{
+	0% {
+		display:none;
+		top:-260px;
+	}
+	50% {
+		display:inline;
+		top:-250px;
+	}
+	100%{
+		display:none;
+		top:-260px;
+	}
+}
+
+
+@-webkit-keyframes swim
+{
+	0% {-webkit-transform:rotate(-60deg);}
+	50% {-webkit-transform:rotate(-30deg);}
+	100% {-webkit-transform:rotate(-60deg);}
+}
+
+.fin{
+	-webkit-transform-origin :0 0;
+	-webkit-animation: swim 1s infinite; 
+	position:relative;
+	background-color: orange;
+	top: -150px;
+	left:90px;
+	width:20px;
+	height:30px;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
